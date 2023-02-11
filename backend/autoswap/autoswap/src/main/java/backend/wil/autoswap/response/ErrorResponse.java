@@ -1,4 +1,4 @@
-package backend.wil.autoswap.error;
+package backend.wil.autoswap.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
