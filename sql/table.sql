@@ -9,16 +9,16 @@ user_name varchar(30), is_buyer boolean, password_val varchar(255) NOT NULL,
 profile_link varchar(8000));
 
 INSERT INTO customer(first_name,last_name,user_name,is_buyer,password_val,profile_link) VALUES 
-("Ubaid","Mansuri","ubaid.code01@gmail.com",false,MD5('Abc123'),
+("Ubaid","Mansuri","ubaid.code01@gmail.com",false,'Abc123',
 "https://firebasestorage.googleapis.com/v0/b/autoswap-since-2003.appspot.com/o/User%20ProfilePhotos%2FuserProfileUrl1.jpeg?alt=media&token=1b57b0e5-0d5d-4dbc-9537-c9e6dff606b2" );
 INSERT INTO customer(first_name,last_name,user_name,is_buyer,password_val,profile_link) VALUES 
-("Rahul","Murari","rahul123@gmail.com",true,MD5('Xyz987'),
+("Rahul","Murari","rahul123@gmail.com",true,'Xyz987',
 "https://firebasestorage.googleapis.com/v0/b/autoswap-since-2003.appspot.com/o/User%20ProfilePhotos%2FuserProfileUrl1.jpeg?alt=media&token=1b57b0e5-0d5d-4dbc-9537-c9e6dff606b2");
 INSERT INTO customer (first_name,last_name,user_name,is_buyer,password_val,profile_link) VALUES 
-("Moses","John","moses123@gmail.com",true,MD5('Mnp456'),
+("Moses","John","moses123@gmail.com",true,'Mnp456',
 "https://firebasestorage.googleapis.com/v0/b/autoswap-since-2003.appspot.com/o/User%20ProfilePhotos%2FuserProfileUrl1.jpeg?alt=media&token=1b57b0e5-0d5d-4dbc-9537-c9e6dff606b2");
 INSERT INTO customer (first_name,last_name,user_name,is_buyer,password_val,profile_link) VALUES 
-("Kavya","Sri Panuganti","kavya123@gmail.com",false,MD5('Hij345'),
+("Kavya","Sri Panuganti","kavya123@gmail.com",false,'Hij345',
 "https://firebasestorage.googleapis.com/v0/b/autoswap-since-2003.appspot.com/o/User%20ProfilePhotos%2FuserProfileUrl1.jpeg?alt=media&token=1b57b0e5-0d5d-4dbc-9537-c9e6dff606b2");
 
 
