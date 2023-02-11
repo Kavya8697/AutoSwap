@@ -1,8 +1,5 @@
 package backend.wil.autoswap.service;
 
-import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
