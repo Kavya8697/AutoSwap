@@ -11,5 +11,6 @@ import backend.wil.autoswap.entity.Customer;
 @Repository
 public interface CustomerRepo extends JpaRepository<Customer, Long>{
 
+	Customer findByCustomerId(Long id);
 
 }

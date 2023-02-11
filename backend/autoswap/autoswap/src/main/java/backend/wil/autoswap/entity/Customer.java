@@ -166,6 +166,16 @@ public class Customer {
 		this.carList = carList;
 	}
 
+
+
+
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", userName=" + userName + ", isBuyer=" + isBuyer + ", passwordVal=" + passwordVal + ", profileLink="
+				+ profileLink + ", carList=" + carList + "]";
+	}
+
 	
 	
 	
