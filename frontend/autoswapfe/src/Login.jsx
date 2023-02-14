@@ -11,11 +11,11 @@ export const Login = (props) => {
     }
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/customerapi/getcustomer/1")
+        axios.get("http://localhost:8080/customerapi/getcustomer/10")
         .then(res => {
         const persons = res.data;
         console.log(persons)
-    })
+    }).catch(err=>console.log(err))
     })
 
     return (
