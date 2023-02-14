@@ -1,5 +1,10 @@
 package backend.wil.autoswap.service;
 
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.sql.SQLDataException;
+import java.sql.SQLException;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +47,7 @@ public class CustomerService {
 //	}
 	
 	
-	@Transactional
+	@Transactional(rollbackFor = { SQLException.class })
 	public Integer updatePassword(Customer customer, UpdatePassword updatePassword) {
 		
 		if(updatePassword.getOldPassWord().equals(customer.getPasswordVal())) {

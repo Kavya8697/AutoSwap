@@ -3,6 +3,7 @@ package backend.wil.autoswap.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +28,9 @@ import backend.wil.autoswap.service.CustomerService;
 @RequestMapping("/customerapi")
 public class Controller {
 	
+    @Value("${cloud.aws.credentials.access-key}")
+    private String accessKey;
+    
 	@Autowired
 	private CustomerRepo customerRepo;
 	
@@ -64,7 +68,7 @@ public class Controller {
 	
 	@PostMapping("/createcustomer")
 	public ResponseEntity createCustomer(@RequestBody Customer customer) {
-		System.out.println(customer);
+		
 		Customer customerCreated = customerService.createCustomer(customer);
 		
 		if(customerCreated==null) {
@@ -84,9 +88,10 @@ public class Controller {
 		
 		if(customer==null) {
 			ErrorResponse errorResponse = new ErrorResponse();
-			errorResponse.setErrorMessage("Bad");
+			errorResponse.setErrorMessage("Customer not found");
 	        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
 		}
+
 		
 		return new ResponseEntity<>(customer, HttpStatus.OK);
 	}
