@@ -61,7 +61,13 @@ values ("https://firebasestorage.googleapis.com/v0/b/autoswap-since-2003.appspot
 "https://firebasestorage.googleapis.com/v0/b/autoswap-since-2003.appspot.com/o/Car%20Photos%2FcarPhoto7.jpeg?alt=media&token=ca92c246-cddd-4d95-91e0-d8264e8367ac",3);
 
 
-
+CREATE TABLE CARORDER(order_id int AUTO_INCREMENT PRIMARY KEY, customer_id int, car_id int,
+    CONSTRAINT fk_customer_id
+    FOREIGN KEY (customer_id) 
+        REFERENCES CUSTOMER(customer_id),     
+        CONSTRAINT fk_car_id
+    FOREIGN KEY (car_id) 
+        REFERENCES CAR(car_id));
 
 
 create table CARHOLDERS(
